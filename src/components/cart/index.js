@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import "./index.css";
 
 function Cart({cart}) {
-
     return (
         <div className="card my-16 mr-25 flex-30">
             <section className="layout-row align-items-center justify-content-center px-16">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function ItemCard({ product, key }) {
+function ItemCard({ product, key, addToCard }) {
   const [quantity, setQuantity] = useState(0);
 
   const addQuantity = () => {
@@ -24,7 +24,7 @@ function ItemCard({ product, key }) {
           <p className="ma-0 mt-8 text-center">${product.price}</p>
         </div>
         <div className="card-actions justify-content-center pa-4">
-          <button className="x-small outlined" data-testid="btn-item-add">
+          <button className="x-small outlined" data-testid="btn-item-add" onClick={() => addToCard(product, quantity)}>
             Add To Cart
           </button>
 
